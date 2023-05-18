@@ -10,30 +10,56 @@
 // Reminder: The test will call your function
 // Run the file with the following command: $ yarn jest
 
+// RED-GREEN-REFACTOR process
+
+// basic jest test 
+
+// describe("greeter", () => {
+//   it("returns a generic greeting", () => {
+//     expect(greeter()).toEqual("Hello, LEARN student!")
+//   })
+// })
+
+// Write the test
+// See the test fail
+// Write the code
+// See the test pass
+// Refactor, if necessary
+
 // --------------------1) Create a function that takes in a number (greater than 2) and returns an array that length containing the numbers of the Fibonacci sequence.
 
 // a) Create a test with expect statements for each of the variables provided.
 
-const fibLength1 = 6
-// Expected output: [1, 1, 2, 3, 5, 8]
+describe("fib", () => {
+  it("takes in a number (greater than 2) and returns an array that length containing the numbers of the Fibonacci sequence", () => {
+    const fibLength1 = 6
+    // Expected output: [1, 1, 2, 3, 5, 8]
 
-const fibLength2 = 10
-// Expected output: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
-
-const fibResult1 = fib(fibLength1);
-expect(fibResult1).toEqual([1, 1, 2, 3, 5, 8]);
-
-const fibResult2 = fib(fibLength2);
-expect(fibResult2).toEqual([1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
+    const fibLength2 = 10
+    // Expected output: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+    expect(fib(fibLength1)).toEqual([1, 1, 2, 3, 5, 8])
+    expect(fib(fibLength2)).toEqual([1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
+  })
+})
 
 // b) Create the function that makes the test pass.
 
-const fib = (length) => {
+// pseudo code: 
+// input: number greater than 2
+// output/return: array with a length of the input
+// name of function: fib
+// function took in a parameter called number
+const fib = (number) => {
+// fibi sequence begins with two values. stored two values in an array
   const arr = [1, 1];
-  for (let i = 2; i < length; i++) {
+// used for loop to begin the count at the index of the next value needed, used the number to stop the for loop in incroments of 1
+  for (let i = 2; i < number; i++) {
+// we use the push method to add values to the end of the array and we get the next value by adding the previous 2 values and we get those two values by using bracket notation
     arr.push(arr[i - 1] + arr[i - 2]);
+// console.log(arr) - if i wanted to see data(before return)
   }
   return arr;
+// return array outisde of for loop to allow the for loop to complete itself
 };
 
 
@@ -41,6 +67,12 @@ const fib = (length) => {
 // Hint: Check out this resource: Object.values() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values
 
 // a) Create a test with expect statements for each of the variables provided.
+
+describe("array", () => {
+    it("takes in an object and returns an array of the values sorted from least to greatest", () => {
+      expect(array()).toEqual("Hello, LEARN student!")
+    })
+  })
 
 const studyMinutesWeek1 = {
   sunday: 90,
@@ -64,10 +96,13 @@ const studyMinutesWeek2 = {
 }
 // Expected output: [10, 15, 20, 45, 60, 65, 100]
 
-expect(addArr(studyMinutesWeek1)).toEqual([15,15,20,30,30,60,90])
-expect(addArr(studyMinutesWeek2)).toEqual([10,15,20,45,60,65,100])
-
 // b) Create the function that makes the test pass.
+
+// pseudo code: 
+// input: function that takes in an object 
+// output/return: array sorted from least to greatest
+// function took in an object and returned an array
+// used the .sort method to sort the objects
 
 const addArr = (object) => {
   return object.values(object).sort((a, b) => a - b)
@@ -76,6 +111,12 @@ const addArr = (object) => {
 // --------------------3) Create a function that takes in an array and returns an array of the accumulating sum. An empty array should return an empty array.
 
 // a) Create a test with expect statements for each of the variables provided.
+
+describe("greeter", () => {
+    it("returns a generic greeting", () => {
+      expect(greeter()).toEqual("Hello, LEARN student!")
+    })
+  })
 
 const accountTransactions1 = [100, -17, -23, -9]
 // Expected output: [100, 83, 60, 51]
@@ -86,27 +127,13 @@ const accountTransactions2 = [250, -89, 100, -96]
 const accountTransactions3 = []
 // Expected output: []
 
-
-const accountTransactions1 = [100, -17, -23, -9];
-expect(accountTransactions1.reduce((acc, val) => acc + val, 0)).toEqual(151);
-
-const accountTransactions2 = [250, -89, 100, -96];
-expect(accountTransactions2.reduce((acc, val) => acc + val, 0)).toEqual(165);
-
-const accountTransactions3 = [];
-expect(accountTransactions3).toEqual([]);
-
 // b) Create the function that makes the test pass.
 
-function test() {
-  const accountTransactions1 = [100, -17, -23, -9];
-  const accountTransactions2 = [250, -89, 100, -96];
-  const accountTransactions3 = [];
+// pseudo code: 
+// input: function that takes in an array 
+// output/return: array with accumalting sum
+// used the add method to create this function
 
-  const result1 = accountTransactions1.reduce((acc, curr) => acc + curr, 0);
-  const result2 = accountTransactions2.reduce((acc, curr) => acc + curr, 0);
-
-  expect(result1).toBe(100);
-  expect(result2).toBe(165);
-  expect(accountTransactions3).toEqual([]);
+const addArr = (array) => {
+  return array.values(array).add(a + b)
 }

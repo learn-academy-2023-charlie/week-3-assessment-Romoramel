@@ -23,13 +23,14 @@ Researched answer: Yarn is a package manager that doubles down as project manage
 
 Your answer: react is a way to display your code thorugh a web page 
 
-Researched answer: A React UI component library is a tool or software system that comes with ready-to-use components to use in React-based applications and sites
+Researched answer: react is a tool that comes ready to use with components to use in react-based apps
+
 
 4. What is the difference between state values and props in React?
 
-Your answer: i am not too sure?
+Your answer: state is controled by the components themselves while props are external and control by rendered components
 
-Researched answer: The key difference between props and state is that state is internal and controlled by the component itself while props are external and controlled by whatever renders the component.
+Researched answer: state is a built-in React object that is used to store data or information about the component and props in react are a type of object where the value is stored
 
 5. What is the DOM? 
 
