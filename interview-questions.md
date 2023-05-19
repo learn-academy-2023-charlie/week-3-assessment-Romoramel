@@ -36,13 +36,13 @@ Researched answer: state is a built-in React object that is used to store data o
 
 Your answer: a document object model 
 
-Researched answer: The Document Object Model (DOM) is a programming interface for web documents.
+Researched answer: DOM is a program interface for web documents
 
 6. STRETCH: Which is the difference between a div tag and a span tag?
 
 Your answer: div tag is meant for bigger block-level and span tag is a smaller block-level, both meant for styling
 
-Researched answer: A div element is used for block-level organization and styling of page elements, whereas a span element is used for inline organization and styling
+Researched answer: div tag's are used for block-level's. Span tag's are used for inline organization and styling
 
 ## Looking Ahead: Terms for Next Week
 

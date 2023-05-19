@@ -68,9 +68,10 @@ const fib = (number) => {
 
 // a) Create a test with expect statements for each of the variables provided.
 
-describe("array", () => {
+describe("addArray", () => {
     it("takes in an object and returns an array of the values sorted from least to greatest", () => {
-      expect(array()).toEqual("Hello, LEARN student!")
+      expect(addArray(studyMinutesWeek1)).toEqual([15, 15, 20, 30, 30, 60, 90])
+      expect(addArray(studyMinutesWeek2)).toEqual([10, 15, 20, 45, 60, 65, 100])
     })
   })
 
@@ -104,7 +105,7 @@ const studyMinutesWeek2 = {
 // function took in an object and returned an array
 // used the .sort method to sort the objects
 
-const addArr = (object) => {
+const addArray = (object) => {
   return object.values(object).sort((a, b) => a - b)
 }
 
@@ -114,10 +115,11 @@ const addArr = (object) => {
 
 describe("greeter", () => {
     it("returns a generic greeting", () => {
-      expect(greeter()).toEqual("Hello, LEARN student!")
-    })
+      expect(greeter(accountTransactions1)).toEqual([100, 83, 60, 51])
+      expect(greeter(accountTransactions2)).toEqual([250, -89, 100, -96])
+      expect(greeter(accountTransactions3)).toEqual([])
   })
-
+})
 const accountTransactions1 = [100, -17, -23, -9]
 // Expected output: [100, 83, 60, 51]
 
